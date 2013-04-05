@@ -61,7 +61,7 @@ bayeux.getClient().subscribe('/fly', function(message) {
   if(message.takeoff){client.takeoff(); console.log('takeoff'); }
   if(message.land){client.land(); console.log('land'); }
   if(message.stop){client.stop() }
-
+  //console.log (message.note);
   if(typeof notes[message.note] == 'function'){
     notes[message.note]();
   }

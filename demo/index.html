@@ -49,17 +49,17 @@
                     buffer.push(note);
                     //console.log('keydown', note);
                     setTimeout(function() {
-                        console.log(buffer, keyIsDown);
+                        //console.log(buffer, keyIsDown);
                         // send to server
                         var flattenedBuffer = buffer.join(',');
                         client.publish('/fly', {note: flattenedBuffer});
                         buffer = [];
-                        if(keyIsDown){
-                            interval = setInterval(function() {
-                                client.publish('/fly', {note: flattenedBuffer});
-                                // send to server
-                            }, 100);
-                        }
+                        // if(keyIsDown){
+                        //     interval = setInterval(function() {
+                        //         client.publish('/fly', {note: flattenedBuffer});
+                        //         // send to server
+                        //     }, 100);
+                        // }
                     }, 150);
                 });
 
