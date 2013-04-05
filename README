@@ -1,5 +1,12 @@
 Qwerty Hancock Copter
 ==============
-
 Qwerty Hancock (http://stuartmemo.com/qwerty-hancock/) hooked up to an AR Drone
 
+
+
+
+How to run
+===
+node server.js
+node app.js
+open "localhost:1337"
