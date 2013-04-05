@@ -64,8 +64,8 @@
                 });
 
                 window.addEventListener('keyup', function(ev) {
-                    if(ev.keyCode === 18){client.publish('/fly', {takeoff: true}); }
-                    if(ev.keyCode === 32){client.publish('/fly', {land: true}); }
+                    if(ev.keyCode === 38){client.publish('/fly', {takeoff: true}); }
+                    if(ev.keyCode === 40){client.publish('/fly', {land: true}); }
                 });
 
                 keyboard.keyUp(function (note, frequency) {
