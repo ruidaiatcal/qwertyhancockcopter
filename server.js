@@ -56,6 +56,23 @@ var notes = {
   }
 };
 
+
+
+
+var script = [
+  function() {
+    client.up(0.08); 
+    //stop it
+  },
+  function() {},
+  function() {},
+  function() {},
+  function() {},
+  function() {},
+]
+
+var i =0;
+
 bayeux.getClient().subscribe('/fly', function(message) {
   console.log('message', message);
   if(message.takeoff){client.takeoff(); console.log('takeoff'); }
@@ -65,6 +82,10 @@ bayeux.getClient().subscribe('/fly', function(message) {
   if(typeof notes[message.note] == 'function'){
     notes[message.note]();
   }
+  script[i]();
+
+  i++;
+  console.log(i);
 });
 
 server.listen(1338);
