@@ -100,12 +100,15 @@ bayeux.getClient().subscribe('/fly', function(message) {
   if(message.stop){client.stop() }
   //console.log (message.note);
   if(typeof notes[message.note] == 'function'){
+    console.log('message.note: ');
+    console.log(message.note);
+
     notes[message.note]();
   }
-  script[i]();
+  // script[i]();
 
-  i++;
-  console.log(i);
+  // i++;
+  // console.log(i);
 });
 
 server.listen(1338);
