@@ -6,7 +6,12 @@ Qwerty Hancock (http://stuartmemo.com/qwerty-hancock/) hooked up to an AR Drone
 
 
 How to run
-===
+==============
 node server.js
 node app.js
-open "localhost:1337"
+open "localhost:1337" in your browser
+
+
+What's different
+==============
+Now supporting chords. A note or a combination of notes can be played on the keyboard, but regardless of its duration, the drone movement is only triggered once. 
