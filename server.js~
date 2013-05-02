@@ -81,12 +81,10 @@ var script = [
   function(){},
   function(){},
   function() {
-  	client.down(0.2);
+  	client.down();
   },
   
-  function(){
-  	client.stop();
-  },
+  function(){},
   function() {
 	  client.land();},
 ]

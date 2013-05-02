@@ -194,6 +194,15 @@
          };
         }
 
+	var playSong = function(key) {
+		keyboardDown('Du');
+		keyboardDown('Cu');
+		keyboardDown('Bl');
+		keyboardDown('Al');
+		keyboardDown('Gl');
+		console.log("playSong called");
+	};
+
        var keyboardDown = function(key) {
            if (key.keyCode in keysDown) return;
            keysDown[key.keyCode] = true;
